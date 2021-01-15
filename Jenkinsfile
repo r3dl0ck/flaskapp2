@@ -43,7 +43,7 @@ pipeline {
     stage ('Deploy') {
       steps {
         script {
-          build job: 'api-deploy', parameters: [string(name: 'ENVIRONMENT', value: 'dev'), string(name: 'EXTRA_PARAMS', value: '--skip-tags=drain')
+          build job: 'api-deploy', parameters: [string(name: 'ENVIRONMENT', value: 'dev'), string(name: 'EXTRA_PARAMS', value: '--skip-tags=drain')]
         }
       }
     }
